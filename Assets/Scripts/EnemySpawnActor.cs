@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemySpawnActor : MonoBehaviour {
 
     public GameObject enemy_prefab;
-    public float spawn_time;// seconds between spawns
-    public int spawn_count = 3;
+    public float spawn_time = 2;// seconds between spawns
+    public int spawn_count = 7;
     public float spawn_radius; // distance from player to spawn
 
     private PlayerActor player;
@@ -17,6 +17,7 @@ public class EnemySpawnActor : MonoBehaviour {
 	void Start () {
         spawn_timer = spawn_time;
         player = GameObject.FindObjectOfType<PlayerActor>();
+        
 	}
 	
 	// Update is called once per frame
@@ -38,8 +39,12 @@ public class EnemySpawnActor : MonoBehaviour {
                 Vector3 spawn_point = player.transform.position + spawn_direction;
                 // Spawn the enemy at the desired location
                 Instantiate(enemy_prefab, spawn_point, Quaternion.identity);
+
+                
             }
         }
+
+
 
 	}
 }
