@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 833447042}
   m_Layer: 0
   m_Name: EnemyCube
-  m_TagString: CubeEnemyClone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c522ed12ec630fc4dbf0301d62e81cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.03
+  speed: 6
 --- !u!143 &833447042
 CharacterController:
   m_ObjectHideFlags: 0
@@ -527,7 +527,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1346183275350798, guid: 0d33fc1e820efc14b90ef08e15b0be01, type: 2}
       propertyPath: m_TagString
-      value: CubeEnemyClone
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 114084660766825786, guid: 0d33fc1e820efc14b90ef08e15b0be01,
+        type: 2}
+      propertyPath: speed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d33fc1e820efc14b90ef08e15b0be01, type: 2}
@@ -543,7 +548,7 @@ GameObject:
   - component: {fileID: 1683904475}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: CubeEnemyClone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

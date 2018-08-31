@@ -12,6 +12,7 @@ public class PlayerActor : MonoBehaviour {
 	}
 
 
+
     public void KeyboardInput()
     { 
         if (Input.GetKey(KeyCode.D))
@@ -46,10 +47,37 @@ public class PlayerActor : MonoBehaviour {
         }
     }
 
-	// Update is called once per frame
-	void Update () {
+    public void RayGun()
+    {
+        Vector3 mouse_pos = Input.mousePosition;
+
+        Ray mouse_ray = Camera.main.ScreenPointToRay(mouse_pos);
+
+      
+        Plane player_plane = new Plane(Vector3.up, transform.position);
+
+        float ray_distance = 0;
+        player_plane.Raycast(mouse_ray, out ray_distance);
+
+        Vector3 cast_point = mouse_ray.GetPoint(ray_distance);
+
+        Vector3 to_cast_point = cast_point - transform.position;
+        to_cast_point.Normalize();
+        Ray fire_ray = new Ray(transform.position, to_cast_point);
+
+        RaycastHit info;
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(fire_ray, out info))
+        {
+           if (info.collider.tag == "Enemy") 
+            Destroy(info.collider.gameObject);
+        }
+
+    }
+    // Update is called once per frame
+    void Update () {
 
         KeyboardInput();
+        RayGun();
 
     }
 }
