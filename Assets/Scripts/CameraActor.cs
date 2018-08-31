@@ -12,12 +12,12 @@ public class CameraActor : MonoBehaviour {
     public float smoothTime = 0.3f;
     private Vector3 velocity = Vector3.zero;
 
-    private Vector3 boom;
+    //private Vector3 boom;
 
 	// Use this for initialization
 	void Start () {
         // Get the vector from the target to us
-        boom = this.transform.position - target.position;
+        //boom = this.transform.position - target.position;
 
 	}
 	
