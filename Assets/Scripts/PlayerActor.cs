@@ -6,6 +6,7 @@ public class PlayerActor : MonoBehaviour {
 
     private CharacterController controller;
     public float speed = 5.0f;
+    public float turnSpeed = 1.0f;
 
     public CameraActor camera_actor;
 
@@ -17,7 +18,7 @@ public class PlayerActor : MonoBehaviour {
 
     private Vector3 PlatformGetPlayerFireDirection()
     {
-        Vector3 mouse_pos = Input.mousePosition;
+        Vector3 mouse_pos =  Vector3.right * (Input.GetAxis("Mouse X") + Screen.width / 2.0f);
 
         Ray mouse_ray = Camera.main.ScreenPointToRay(mouse_pos);
 
@@ -74,8 +75,11 @@ public class PlayerActor : MonoBehaviour {
     public void RayGun()
     {
         // Make player face where they're shooting
-        Vector3 fire_direction = PlatformGetPlayerFireDirection();
-        transform.forward = fire_direction;
+        //Vector3 fire_direction = PlatformGetPlayerFireDirection();
+        //transform.forward = fire_direction;
+
+        transform.eulerAngles += Vector3.up * Input.GetAxis("Mouse X") * turnSpeed;
+        Vector3 fire_direction = transform.forward;
 
         // Set offset to be equal to the fire_direction
         camera_actor.offset = fire_direction;
@@ -92,17 +96,14 @@ public class PlayerActor : MonoBehaviour {
 
     }
 
-    //public void CameraControl()
-    //{
 
-    //}
 
     // Update is called once per frame
     void Update () {
 
         KeyboardInput();
         RayGun();
-        //CameraControl();
+
        
     }
 }
