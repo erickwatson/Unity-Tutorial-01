@@ -29,23 +29,14 @@ public class CameraActor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            overHead.enabled = !overHead.enabled;
-            firstPerson.enabled = !firstPerson.enabled;
-        }
 
-        if (overHead.enabled)
-        {
+
+
             // Set our position to be the same relative to the player
             Vector3 target_pos = target.position +  offset;
 
-            this.transform.position = Vector3.Lerp(transform.position, target_pos, snapSpeed * Time.deltaTime);
-        }
 
-        if (firstPerson.enabled)
-        { 
 
-        }
+
     }
 }

@@ -6,7 +6,11 @@ public class PlayerActor : MonoBehaviour {
 
     private CharacterController controller;
     public float speed = 5.0f;
-    public float turnSpeed = 1.0f;
+    public float turnSpeed = 10.0f;
+
+    public thirdPerson thirdPerson_cam = null;
+    public firstPerson firstPerson_cam;
+
 
     public CameraActor camera_actor;
 
@@ -72,29 +76,34 @@ public class PlayerActor : MonoBehaviour {
 
     }
 
+
+
     public void RayGun()
     {
         // Make player face where they're shooting
         //Vector3 fire_direction = PlatformGetPlayerFireDirection();
         //transform.forward = fire_direction;
-
-        transform.eulerAngles += Vector3.up * Input.GetAxis("Mouse X") * turnSpeed;
-        Vector3 fire_direction = transform.forward;
-
-        // Set offset to be equal to the fire_direction
-        camera_actor.offset = fire_direction;
         
+ //       if (transform.Find("thirdPerson").gameObject.activeInHierarchy)
+       // {
+            //transform.eulerAngles += Vector3.up * Input.GetAxis("Mouse X") * turnSpeed;
+            Vector3 fire_direction = transform.forward;
 
-        Ray fire_ray = new Ray(transform.position, fire_direction);
+            // Set offset to be equal to the fire_direction
+           // thirdPerson_cam.offset = fire_direction;
 
-        RaycastHit info;
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(fire_ray, out info))
-        {
-           if (info.collider.tag == "Enemy") 
-            Destroy(info.collider.gameObject);
-        }
 
+            Ray fire_ray = new Ray(transform.position, fire_direction);
+
+            RaycastHit info;
+            if (Physics.Raycast(fire_ray, out info))
+            {
+                if (info.collider.tag == "Enemy")
+                    Destroy(info.collider.gameObject);
+            }
+       // }
     }
+
 
 
 
@@ -102,7 +111,25 @@ public class PlayerActor : MonoBehaviour {
     void Update () {
 
         KeyboardInput();
-        RayGun();
+
+
+        Ray screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        RaycastHit info;
+        
+        if (Physics.Raycast(screenRay, out info))
+        {
+            Vector3 lookAtPoint = info.point;
+            lookAtPoint.y = transform.position.y;
+            transform.rotation = Quaternion.LookRotation(lookAtPoint - transform.position, Vector3.up);
+        }
+
+
+        //transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * turnSpeed * Time.deltaTime);
+        //Debug.Log("Horizontal axis:" + Input.GetAxis("Mouse X"));
+
+        if (Input.GetMouseButtonDown(0))
+            RayGun();
 
        
     }
