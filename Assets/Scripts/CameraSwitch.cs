@@ -7,7 +7,7 @@ public class CameraSwitch : MonoBehaviour {
 
     public Transform target;
 
-    private Vector3 velocity = Vector3.zero;
+    //private Vector3 velocity = Vector3.zero;
 
     //private Vector3 boom;
 

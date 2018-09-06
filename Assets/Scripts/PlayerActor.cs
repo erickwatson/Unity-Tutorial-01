@@ -6,18 +6,34 @@ public class PlayerActor : MonoBehaviour {
 
     private CharacterController controller;
     public float speed = 5.0f;
-    public float turnSpeed = 10.0f;
+    public float turnSpeed;
+    public float walkSpeed;
 
-    public thirdPerson thirdPerson_cam = null;
-    public firstPerson firstPerson_cam;
+    private firstPerson firstPerson_cam;
+    private CameraSwitch checkCam;
 
+    // FirstPerson variables
+    public Rigidbody Rigid;
+    public float MouseSensitivity;
+    public float MoveSpeed;
+    public float JumpForce;
 
-    public CameraActor camera_actor;
 
     Vector3 fly_up = new Vector3(0, 1, 0);
     Vector3 fly_down = new Vector3(0, -1, 0);
 
+    void Awake()
+    {
+        
+    }
 
+    // Use this for initialization
+    void Start()
+    {
+        controller = gameObject.GetComponent<CharacterController>();
+        checkCam = gameObject.GetComponent<CameraSwitch>();
+        Rigid = GetComponent<Rigidbody>();
+    }
 
 
     private Vector3 PlatformGetPlayerFireDirection()
@@ -49,20 +65,39 @@ public class PlayerActor : MonoBehaviour {
     }
    
     
-    // Use this for initialization
-    void Start () {
-        controller = gameObject.GetComponent<CharacterController>();
-    }
+
 
     public void KeyboardInput()
     {
-        float h_input = Input.GetAxis("Horizontal");
-        float v_input = Input.GetAxis("Vertical");
 
-        Vector3 direction = new Vector3(h_input, 0, v_input);
+        if (checkCam.thirdPerson.gameObject.activeSelf)
+        {
+            // ThirdPerson Camera mouse controls
+            PlayerRotate();
 
-        direction *= Time.deltaTime * speed;
-        controller.Move(direction);
+            // ThirdPerson global keyboard controls
+            float h_input = Input.GetAxis("Horizontal");
+            float v_input = Input.GetAxis("Vertical");
+
+            Vector3 direction = new Vector3(h_input, 0, v_input);
+
+            direction *= Time.deltaTime * speed;
+            controller.Move(direction);
+        }
+        if (checkCam.firstPerson.gameObject.activeSelf)
+        {
+            // FirstPerson keyboard controls
+
+
+            float h_input = Input.GetAxis("Horizontal");
+            float v_input = Input.GetAxis("Vertical");
+            Vector3 direction = new Vector3(h_input, 0, v_input);
+
+            direction *= Time.deltaTime * speed;
+            controller.Move(direction);
+
+        }
+
 
         if (Input.GetKey(KeyCode.LeftControl))
         {
@@ -78,21 +113,11 @@ public class PlayerActor : MonoBehaviour {
 
 
 
+
     public void RayGun()
     {
-        // Make player face where they're shooting
-        //Vector3 fire_direction = PlatformGetPlayerFireDirection();
-        //transform.forward = fire_direction;
-        
- //       if (transform.Find("thirdPerson").gameObject.activeInHierarchy)
-       // {
-            //transform.eulerAngles += Vector3.up * Input.GetAxis("Mouse X") * turnSpeed;
+   
             Vector3 fire_direction = transform.forward;
-
-            // Set offset to be equal to the fire_direction
-           // thirdPerson_cam.offset = fire_direction;
-
-
             Ray fire_ray = new Ray(transform.position, fire_direction);
 
             RaycastHit info;
@@ -101,9 +126,24 @@ public class PlayerActor : MonoBehaviour {
                 if (info.collider.tag == "Enemy")
                     Destroy(info.collider.gameObject);
             }
-       // }
+
     }
 
+
+
+    public void PlayerRotate()
+    {
+        Ray screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        RaycastHit info;
+
+        if (Physics.Raycast(screenRay, out info))
+        {
+            Vector3 lookAtPoint = info.point;
+            lookAtPoint.y = transform.position.y;
+            transform.rotation = Quaternion.LookRotation(lookAtPoint - transform.position, Vector3.up);
+        }
+    }
 
 
 
@@ -112,24 +152,9 @@ public class PlayerActor : MonoBehaviour {
 
         KeyboardInput();
 
-
-        Ray screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        RaycastHit info;
-        
-        if (Physics.Raycast(screenRay, out info))
-        {
-            Vector3 lookAtPoint = info.point;
-            lookAtPoint.y = transform.position.y;
-            transform.rotation = Quaternion.LookRotation(lookAtPoint - transform.position, Vector3.up);
-        }
-
-
-        //transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * turnSpeed * Time.deltaTime);
-        //Debug.Log("Horizontal axis:" + Input.GetAxis("Mouse X"));
-
+        // Fire
         if (Input.GetMouseButtonDown(0))
-            RayGun();
+        RayGun();
 
        
     }

@@ -15,6 +15,7 @@ public class thirdPerson : MonoBehaviour {
     // Use this for initialization
     void Start () {
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        checkActive = true;
 	}
 	
 	// Update is called once per frame
