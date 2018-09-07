@@ -21,8 +21,10 @@ public class PlayerActor : MonoBehaviour {
     public Transform camLook;
 
 
+
+
     public float MoveSpeed;
-    public float JumpForce;
+
 
 
     Vector3 fly_up = new Vector3(0, 1, 0);
@@ -38,7 +40,9 @@ public class PlayerActor : MonoBehaviour {
     {
         controller = gameObject.GetComponent<CharacterController>();
         checkCam = gameObject.GetComponent<CameraSwitch>();
-        
+   
+
+
     }
 
 
@@ -69,8 +73,8 @@ public class PlayerActor : MonoBehaviour {
     {
         return Input.GetMouseButtonDown(0);
     }
-   
-    
+
+
 
 
     public void KeyboardInput()
@@ -78,6 +82,11 @@ public class PlayerActor : MonoBehaviour {
 
         if (checkCam.thirdPerson.gameObject.activeSelf)
         {
+
+            if (Cursor.lockState == CursorLockMode.Locked)
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
             // ThirdPerson Camera mouse controls
             PlayerRotate();
 
@@ -89,19 +98,34 @@ public class PlayerActor : MonoBehaviour {
 
             direction *= Time.deltaTime * speed;
             controller.Move(direction);
+            
         }
 
         if (checkCam.firstPerson.gameObject.activeSelf)
         {
             // FirstPerson keyboard controls
-            MouseLook();
+            // MouseLook();
+            if (Cursor.lockState != CursorLockMode.Locked)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            rotX += (Input.GetAxis("Mouse X")) * MouseSensitivity;
+            rotY -= (Input.GetAxis("Mouse Y")) * MouseSensitivity;
+
+            rotY = Mathf.Clamp(rotY, minY, maxY);
+            transform.localRotation = Quaternion.Euler(0, rotX, 0);
+            camLook.localRotation = Quaternion.Euler(rotY, 0, 0);
+
 
             float h_input = Input.GetAxis("Horizontal");
             float v_input = Input.GetAxis("Vertical");
             Vector3 direction = new Vector3(h_input, 0, v_input);
-            direction = transform.TransformDirection(direction);
 
+            direction = transform.TransformDirection(direction);
+            
             direction *= Time.deltaTime * speed;
+            
+            // Moves the CharacterController
             controller.Move(direction);
 
         }
@@ -109,11 +133,16 @@ public class PlayerActor : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.LeftControl))
         {
-            controller.Move(fly_down * Time.deltaTime * speed);
+           controller.Move(fly_down * Time.deltaTime * speed);
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            controller.Move(fly_up * Time.deltaTime * speed);
+           controller.Move(fly_up * Time.deltaTime * speed);
+            
+           
+            
+
+
         }
 
 
@@ -121,12 +150,8 @@ public class PlayerActor : MonoBehaviour {
 
     void MouseLook()
     {
-        rotX += (Input.GetAxis("Mouse X") * 0.3f) * MouseSensitivity;
-        rotY -= (Input.GetAxis("Mouse Y") * 0.3f) * MouseSensitivity;
-
-        rotY = Mathf.Clamp(rotY, minY, maxY);
-        transform.localRotation = Quaternion.Euler(0, rotX, 0);
-        camLook.localRotation = Quaternion.Euler(rotY, rotX, 0);
+  
+        
     }
 
 

@@ -34,6 +34,7 @@ public class CameraSwitch : MonoBehaviour {
         {
             thirdPerson.gameObject.SetActive(!thirdPerson.gameObject.activeSelf);
             firstPerson.gameObject.SetActive(!firstPerson.gameObject.activeSelf);
+
         }
 
     }
