@@ -7,7 +7,7 @@ public class CameraActor : MonoBehaviour {
     public float snapSpeed = 10;
     public Transform target;
 
-    private Vector3 velocity = Vector3.zero;
+    //private Vector3 velocity = Vector3.zero;
 
     //private Vector3 boom;
 
@@ -33,7 +33,7 @@ public class CameraActor : MonoBehaviour {
 
 
             // Set our position to be the same relative to the player
-            Vector3 target_pos = target.position +  offset;
+           // Vector3 target_pos = target.position +  offset;
 
 
 
