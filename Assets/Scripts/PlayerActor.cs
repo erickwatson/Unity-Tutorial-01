@@ -20,7 +20,7 @@ public class PlayerActor : MonoBehaviour {
     public float maxY = 90;
     public Transform camLook;
 
-
+    public ParticleSystem hitscan_system;
 
 
     public float MoveSpeed;
@@ -40,9 +40,6 @@ public class PlayerActor : MonoBehaviour {
     {
         controller = gameObject.GetComponent<CharacterController>();
         checkCam = gameObject.GetComponent<CameraSwitch>();
-   
-
-
     }
 
 
@@ -158,6 +155,7 @@ public class PlayerActor : MonoBehaviour {
     public void RayGun()
     {
    
+  
             Vector3 fire_direction = transform.forward;
             Ray fire_ray = new Ray(transform.position, fire_direction);
 
@@ -166,7 +164,8 @@ public class PlayerActor : MonoBehaviour {
             {
                 if (info.collider.tag == "Enemy")
                     Destroy(info.collider.gameObject);
-            }
+            hitscan_system.Play();
+        }
 
     }
 
