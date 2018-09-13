@@ -109,6 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  OnDeathPrefab: {fileID: 1986049921780684, guid: 9a3438e35fc46064ca75e494076c698b,
+    type: 2}
 --- !u!143 &143502462876946858
 CharacterController:
   m_ObjectHideFlags: 1

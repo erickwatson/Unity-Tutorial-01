@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class PlayerActor : MonoBehaviour {
 
+    private EnemyActor enemy_sound;
     private CharacterController controller;
     public float speed = 5.0f;
     public float turnSpeed;
     public float walkSpeed;
+    public Vector3 jumpSpeed;
+    public float jumpStrength; // could Vec3 this to get directional leaps
+    public float mass = 3f;
+
+
+    private Vector3 isGrounded;
 
     private firstPerson firstPerson_cam;
     private CameraSwitch checkCam;
@@ -21,6 +28,7 @@ public class PlayerActor : MonoBehaviour {
     public Transform camLook;
 
     public ParticleSystem hitscan_system;
+    public AudioSource hitscan_sound;
 
 
     public float MoveSpeed;
@@ -68,7 +76,15 @@ public class PlayerActor : MonoBehaviour {
 
     bool PlatformPlayerShouldFire()
     {
+
+        //if (hitscan_sound != null)
+        //{
+            
+        //}
+
+    
         return Input.GetMouseButtonDown(0);
+
     }
 
 
@@ -76,6 +92,13 @@ public class PlayerActor : MonoBehaviour {
 
     public void KeyboardInput()
     {
+        if (controller.isGrounded)
+            jumpSpeed.Set(0, 0, 0);
+
+        Vector3 direction = new Vector3(0, 0, 0);
+        
+
+
 
         if (checkCam.thirdPerson.gameObject.activeSelf)
         {
@@ -91,10 +114,9 @@ public class PlayerActor : MonoBehaviour {
             float h_input = Input.GetAxis("Horizontal");
             float v_input = Input.GetAxis("Vertical");
 
-            Vector3 direction = new Vector3(h_input, 0, v_input);
+            direction = new Vector3(h_input, 0, v_input);
 
-            direction *= Time.deltaTime * speed;
-            controller.Move(direction);
+            
             
         }
 
@@ -116,55 +138,73 @@ public class PlayerActor : MonoBehaviour {
 
             float h_input = Input.GetAxis("Horizontal");
             float v_input = Input.GetAxis("Vertical");
-            Vector3 direction = new Vector3(h_input, 0, v_input);
+            direction = new Vector3(h_input, 0, v_input);
 
             direction = transform.TransformDirection(direction);
             
-            direction *= Time.deltaTime * speed;
-            
-            // Moves the CharacterController
-            controller.Move(direction);
+       
 
         }
 
+        direction *= speed;
 
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-           controller.Move(fly_down * Time.deltaTime * speed);
-        }
-        if (Input.GetKey(KeyCode.Space))
-        {
-           controller.Move(fly_up * Time.deltaTime * speed);
-            
-           
-            
+        // Phsyics for jumping
+        // change this
+        jumpSpeed += Physics.gravity * mass * Time.deltaTime;
 
-
-        }
-
-
-    }
-
-    void MouseLook()
-    {
-  
         
+
+        //if (Input.GetKey(KeyCode.LeftControl))
+        //{
+        //   controller.Move(fly_down * Time.deltaTime * speed);
+        //}
+        //if (Input.GetKey(KeyCode.Space))
+        //{
+        //   controller.Move(fly_up * Time.deltaTime * speed);
+
+        //}
+        if (Input.GetKey(KeyCode.Space) && controller.isGrounded)
+        {
+          
+            //Jump
+            jumpSpeed += new Vector3(0, jumpStrength, 0);
+          
+
+
+        }
+
+        // fall speed calculation
+        direction += jumpSpeed;
+        //Debug.Log(jumpSpeed);
+
+        direction *= Time.deltaTime;
+        controller.Move(direction);
+
     }
+
 
 
     public void RayGun()
     {
-   
-  
-            Vector3 fire_direction = transform.forward;
-            Ray fire_ray = new Ray(transform.position, fire_direction);
 
-            RaycastHit info;
-            if (Physics.Raycast(fire_ray, out info))
+        hitscan_sound.Play();
+        Vector3 fire_direction = transform.forward;
+        Ray fire_ray = new Ray(transform.position, fire_direction);
+
+        RaycastHit info;
+        if (Physics.Raycast(fire_ray, out info))
+        {
+            if (info.collider.tag == "Enemy")
             {
-                if (info.collider.tag == "Enemy")
-                    Destroy(info.collider.gameObject);
+
+                //info.collider.GetComponent<AudioSource>().Play();
+                Destroy(info.collider.gameObject);
+                
+                
+            }
+
             hitscan_system.Play();
+
         }
 
     }
