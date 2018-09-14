@@ -35,8 +35,8 @@ public class PlayerActor : MonoBehaviour {
 
 
 
-    Vector3 fly_up = new Vector3(0, 1, 0);
-    Vector3 fly_down = new Vector3(0, -1, 0);
+    //Vector3 fly_up = new Vector3(0, 1, 0);
+    //Vector3 fly_down = new Vector3(0, -1, 0);
 
     void Awake()
     {
