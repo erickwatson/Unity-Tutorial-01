@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Tute Game Menu.unity
+    guid: aa3593d2582735a4ab5bfda1cdd5da0a
+  - enabled: 1
+    path: Assets/Tute Game.unity
+    guid: 7960b4de868299f4b93f4def6e4209ad

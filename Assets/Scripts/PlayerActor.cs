@@ -14,6 +14,9 @@ public class PlayerActor : MonoBehaviour {
     public float mass = 3f;
 
 
+
+
+
     private Vector3 isGrounded;
 
     private firstPerson firstPerson_cam;
@@ -76,15 +79,8 @@ public class PlayerActor : MonoBehaviour {
 
     bool PlatformPlayerShouldFire()
     {
-
-        //if (hitscan_sound != null)
-        //{
-            
-        //}
-
-    
         return Input.GetMouseButtonDown(0);
-
+ 
     }
 
 
@@ -189,18 +185,21 @@ public class PlayerActor : MonoBehaviour {
 
         hitscan_sound.Play();
         Vector3 fire_direction = transform.forward;
+
+        if (checkCam.firstPerson.gameObject.activeSelf)
+        {
+            fire_direction = checkCam.firstPerson.gameObject.transform.forward;
+        }
         Ray fire_ray = new Ray(transform.position, fire_direction);
 
         RaycastHit info;
+        //Debug.DrawLine(transform.position, transform.position + (fire_direction * 1), Color.red);
         if (Physics.Raycast(fire_ray, out info))
         {
             if (info.collider.tag == "Enemy")
             {
-
                 //info.collider.GetComponent<AudioSource>().Play();
                 Destroy(info.collider.gameObject);
-                
-                
             }
 
             hitscan_system.Play();
@@ -208,6 +207,8 @@ public class PlayerActor : MonoBehaviour {
         }
 
     }
+
+
 
 
 

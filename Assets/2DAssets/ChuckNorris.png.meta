@@ -1,0 +1,1078 @@
+fileFormatVersion: 2
+guid: 3f60652f362014f498a94108ef52a496
+timeCreated: 1442535470
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ChuckNorris_0
+    21300002: ChuckNorris_1
+    21300004: ChuckNorris_2
+    21300006: ChuckNorris_3
+    21300008: ChuckNorris_4
+    21300010: ChuckNorris_5
+    21300012: ChuckNorris_6
+    21300014: ChuckNorris_7
+    21300016: ChuckNorris_8
+    21300018: ChuckNorris_9
+    21300020: ChuckNorris_10
+    21300022: ChuckNorris_11
+    21300024: ChuckNorris_12
+    21300026: ChuckNorris_13
+    21300028: ChuckNorris_14
+    21300030: ChuckNorris_15
+    21300032: ChuckNorris_16
+    21300034: ChuckNorris_17
+    21300036: ChuckNorris_18
+    21300038: ChuckNorris_19
+    21300040: ChuckNorris_20
+    21300042: ChuckNorris_21
+    21300044: ChuckNorris_22
+    21300046: ChuckNorris_23
+    21300048: ChuckNorris_24
+    21300050: ChuckNorris_25
+    21300052: ChuckNorris_26
+    21300054: ChuckNorris_27
+    21300056: ChuckNorris_28
+    21300058: ChuckNorris_29
+    21300060: ChuckNorris_30
+    21300062: ChuckNorris_31
+    21300064: ChuckNorris_32
+    21300066: ChuckNorris_33
+    21300068: ChuckNorris_34
+    21300070: ChuckNorris_35
+    21300072: ChuckNorris_36
+    21300074: ChuckNorris_37
+    21300076: ChuckNorris_38
+    21300078: ChuckNorris_39
+    21300080: ChuckNorris_40
+    21300082: ChuckNorris_41
+    21300084: ChuckNorris_42
+    21300086: ChuckNorris_43
+    21300088: ChuckNorris_44
+    21300090: ChuckNorris_45
+    21300092: ChuckNorris_46
+    21300094: ChuckNorris_47
+    21300096: ChuckNorris_48
+    21300098: ChuckNorris_49
+    21300100: ChuckNorris_50
+    21300102: ChuckNorris_51
+    21300104: ChuckNorris_52
+    21300106: ChuckNorris_53
+    21300108: ChuckNorris_54
+    21300110: ChuckNorris_55
+    21300112: ChuckNorris_56
+    21300114: ChuckNorris_57
+    21300116: ChuckNorris_58
+    21300118: ChuckNorris_59
+    21300120: ChuckNorris_60
+    21300122: ChuckNorris_61
+    21300124: ChuckNorris_62
+    21300126: ChuckNorris_63
+    21300128: ChuckNorris_64
+    21300130: ChuckNorris_65
+    21300132: ChuckNorris_66
+    21300134: ChuckNorris_67
+    21300136: ChuckNorris_68
+    21300138: ChuckNorris_69
+    21300140: ChuckNorris_70
+    21300142: ChuckNorris_71
+    21300144: ChuckNorris_72
+    21300146: ChuckNorris_73
+    21300148: ChuckNorris_74
+    21300150: ChuckNorris_75
+    21300152: ChuckNorris_76
+    21300154: ChuckNorris_77
+    21300156: ChuckNorris_78
+    21300158: ChuckNorris_79
+    21300160: ChuckNorris_80
+    21300162: ChuckNorris_81
+    21300164: ChuckNorris_82
+    21300166: ChuckNorris_83
+    21300168: ChuckNorris_84
+    21300170: ChuckNorris_85
+    21300172: ChuckNorris_86
+    21300174: ChuckNorris_87
+    21300176: ChuckNorris_88
+    21300178: ChuckNorris_89
+    21300180: ChuckNorris_90
+    21300182: ChuckNorris_91
+    21300184: ChuckNorris_92
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ChuckNorris_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 898
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_1
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 898
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_2
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 898
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_3
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 898
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_4
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 898
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_5
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 898
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_6
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 898
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_7
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 898
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_8
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 898
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_9
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 898
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_10
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 898
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_11
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 898
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 772
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_13
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 772
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_14
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 772
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_15
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 772
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_16
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 772
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_17
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 772
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_18
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 772
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_19
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 772
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_20
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 772
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_21
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 772
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_22
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 772
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_23
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 772
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 646
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_25
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 646
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_26
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 646
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_27
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 646
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_28
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 646
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_29
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 646
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_30
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 646
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_31
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 646
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_32
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 646
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_33
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 646
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_34
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 646
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_35
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 646
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_37
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 520
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_38
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 520
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_39
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 520
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_40
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 520
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_41
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 520
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_42
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 520
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_43
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 520
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_44
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 520
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_45
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 520
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_46
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 520
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_47
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 520
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 394
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_49
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 394
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_50
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 394
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_51
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 394
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_52
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 394
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_53
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 394
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_54
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 394
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_55
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 394
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_56
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 394
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_57
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 394
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_58
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 394
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_59
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 394
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 268
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_61
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 268
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_62
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 268
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_63
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 268
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_64
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 268
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_65
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 268
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_66
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 268
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_67
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 268
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_68
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 268
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_69
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 268
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_70
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 268
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_71
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 268
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_73
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 142
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_74
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 142
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_75
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 142
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_76
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 142
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_77
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 142
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_78
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 142
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_79
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 142
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_80
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 142
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_81
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 142
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_82
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 142
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_83
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 142
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_85
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 16
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_86
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 16
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_87
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 16
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_88
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 16
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_89
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 16
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_90
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 16
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_91
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 16
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChuckNorris_92
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 16
+        width: 165
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
