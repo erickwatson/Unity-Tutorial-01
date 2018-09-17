@@ -13,7 +13,7 @@ public class PlayerActor : MonoBehaviour {
     public float jumpStrength; // could Vec3 this to get directional leaps
     public float mass = 3f;
 
-
+    //public Canvas reticule;
 
 
 
@@ -112,7 +112,7 @@ public class PlayerActor : MonoBehaviour {
 
             direction = new Vector3(h_input, 0, v_input);
 
-            
+        
             
         }
 

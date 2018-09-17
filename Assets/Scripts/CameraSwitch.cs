@@ -13,6 +13,7 @@ public class CameraSwitch : MonoBehaviour {
 
     public Camera thirdPerson;
     public Camera firstPerson;
+    public Canvas reticule;
 
 
 
@@ -23,6 +24,7 @@ public class CameraSwitch : MonoBehaviour {
         // boom = this.transform.position + target.position;
         thirdPerson.gameObject.SetActive(true);
         firstPerson.gameObject.SetActive(false);
+        reticule.gameObject.SetActive(false);
 
     }
 
@@ -34,6 +36,7 @@ public class CameraSwitch : MonoBehaviour {
         {
             thirdPerson.gameObject.SetActive(!thirdPerson.gameObject.activeSelf);
             firstPerson.gameObject.SetActive(!firstPerson.gameObject.activeSelf);
+            reticule.gameObject.SetActive(!reticule.gameObject.activeSelf);
 
         }
 
