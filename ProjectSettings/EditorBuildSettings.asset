@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tute Game.unity
     guid: 7960b4de868299f4b93f4def6e4209ad
+  - enabled: 1
+    path: Assets/2D Game.unity
+    guid: eba06dad48c59084ea59ca3bbd9cb27a

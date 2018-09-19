@@ -10,7 +10,12 @@ public class MenuActor : MonoBehaviour {
 		
 	}
 
-    public void LoadLevel(string level_name)
+    public void LoadLevel3D(string level_name)
+    {
+        SceneManager.LoadScene(level_name);
+    }
+
+    public void LoadLevel2D(string level_name)
     {
         SceneManager.LoadScene(level_name);
     }
@@ -24,7 +29,7 @@ public class MenuActor : MonoBehaviour {
     void Update () {
 		if (Input.GetKeyDown(KeyCode.Space))
         {
-            LoadLevel("Tute Game");
+            LoadLevel3D("Tute Game");
         }
 	}
 }

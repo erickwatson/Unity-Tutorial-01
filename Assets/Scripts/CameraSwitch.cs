@@ -14,17 +14,22 @@ public class CameraSwitch : MonoBehaviour {
     public Camera thirdPerson;
     public Camera firstPerson;
     public Canvas reticule;
+    public Camera leftMirror;
+    public Camera rightMirror;
+    public Camera miniMap;
+
 
 
 
     // Use this for initialization
     void Start()
     {
-        // Get the vector from the target to us
-        // boom = this.transform.position + target.position;
         thirdPerson.gameObject.SetActive(true);
         firstPerson.gameObject.SetActive(false);
         reticule.gameObject.SetActive(false);
+        leftMirror.gameObject.SetActive(true);
+        rightMirror.gameObject.SetActive(true);
+        miniMap.gameObject.SetActive(true);
 
     }
 
@@ -37,7 +42,17 @@ public class CameraSwitch : MonoBehaviour {
             thirdPerson.gameObject.SetActive(!thirdPerson.gameObject.activeSelf);
             firstPerson.gameObject.SetActive(!firstPerson.gameObject.activeSelf);
             reticule.gameObject.SetActive(!reticule.gameObject.activeSelf);
+        }
 
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            leftMirror.gameObject.SetActive(!leftMirror.gameObject.activeSelf);
+            rightMirror.gameObject.SetActive(!rightMirror.gameObject.activeSelf);
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            miniMap.gameObject.SetActive(!miniMap.gameObject.activeSelf);
         }
 
     }
