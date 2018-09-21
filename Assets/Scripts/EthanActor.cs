@@ -5,15 +5,18 @@ using UnityEngine;
 public class EthanActor : MonoBehaviour {
 
     private Animator animator;
+    private bool isGrounded;
     private float speed;
     private float direction;
+    private float jump;
     public float turn_speed = 3;
     public float acceleration = 3;
-    public float jump_strength = 3;
+
 	// Use this for initialization
 	void Start () {
         // Get the Animator component
         animator = GetComponent<Animator>();
+        isGrounded = true;
 	}
 	
     void PlayerControl()
@@ -39,28 +42,42 @@ public class EthanActor : MonoBehaviour {
         direction = Mathf.Lerp(direction, desired_direction, turn_speed * Time.deltaTime);
         animator.SetFloat("direction", direction);
 
-        // Jump
+
+     
+
 
 
         //Idle Crouch
 
         float desired_speed = 0;
+        float jump_strength = 0;
         if (!Input.anyKeyDown) // Check if any other keys are being pressed, if none,
                                // then the script steps in.
         {
+
             if (Input.GetKey(KeyCode.LeftControl))
             {
                 desired_speed = -1;
                 speed = Mathf.Lerp(speed, desired_speed, acceleration * Time.deltaTime);
                 animator.SetFloat("speed", speed);
             }
+            // Jump
+
+            else if (Input.GetKey(KeyCode.Space))
+            {
+                isGrounded = false;
+                jump_strength = 1;
 
 
-
+            }
+            
         }
 
-
+        jump = Mathf.Lerp(jump, jump_strength, acceleration * Time.deltaTime);
+        animator.SetFloat("jump", jump);
      
+
+
         if (Input.GetKey(KeyCode.W)) // Move the player forward
         {
             desired_speed = 1; // if the player is moving forward
@@ -70,8 +87,9 @@ public class EthanActor : MonoBehaviour {
             }
         }
         speed = Mathf.Lerp(speed, desired_speed, acceleration * Time.deltaTime);
-        animator.SetFloat("speed", speed);
 
+        animator.SetFloat("speed", speed);
+        Debug.Log(speed);
 
 
 
