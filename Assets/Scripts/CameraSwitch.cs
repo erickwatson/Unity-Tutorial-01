@@ -16,7 +16,7 @@ public class CameraSwitch : MonoBehaviour {
     public Canvas reticule;
     public Camera leftMirror;
     public Camera rightMirror;
-    public Camera miniMap;
+    public GameObject miniMap;
 
 
 
