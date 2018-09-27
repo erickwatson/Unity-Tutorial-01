@@ -13,9 +13,16 @@ public class PlayerActor : MonoBehaviour {
     public float jumpStrength; // could Vec3 this to get directional leaps
     public float mass = 3f;
 
+    public GameObject miniMapPlayer;
+
     //public Canvas reticule;
 
 
+
+
+    public float bindMin = 3f;
+    public float bindMax = 10f;
+    public float bindScale = 0.5f;
 
     private Vector3 isGrounded;
 
@@ -51,6 +58,7 @@ public class PlayerActor : MonoBehaviour {
     {
         controller = gameObject.GetComponent<CharacterController>();
         checkCam = gameObject.GetComponent<CameraSwitch>();
+        //miniMapPlayer = transform.Find("miniMapPlayer").gameObject;
     }
 
 
@@ -236,6 +244,20 @@ public class PlayerActor : MonoBehaviour {
         // Fire
         if (Input.GetMouseButtonDown(0))
         RayGun();
+
+        if (miniMapPlayer != null)
+        {
+   
+
+
+            float bind = bindScale * transform.position.y;
+            bind += bindMin;
+            bind = Mathf.Clamp(bind, bindMin, bindMax);
+            Vector3 scale = new Vector3();
+            scale.Set(bind, bind, bind);
+            miniMapPlayer.transform.localScale = scale;
+            
+        }
 
        
     }
