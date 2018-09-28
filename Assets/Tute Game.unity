@@ -5100,7 +5100,7 @@ Transform:
   - {fileID: 677882877}
   - {fileID: 991826094}
   m_Father: {fileID: 1580397401}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &252875726
 GameObject:
@@ -32048,7 +32048,7 @@ Transform:
   - {fileID: 252875727}
   - {fileID: 1100310452}
   m_Father: {fileID: 1580397401}
-  m_RootOrder: 41
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1345051098
 GameObject:
@@ -35486,16 +35486,16 @@ Transform:
   - {fileID: 2143682561}
   - {fileID: 1437244125}
   - {fileID: 1267040577}
-  - {fileID: 1562426722}
   - {fileID: 251338712}
+  - {fileID: 1562426722}
   - {fileID: 674857762}
+  - {fileID: 1344546713}
   - {fileID: 800506784}
   - {fileID: 745538402}
   - {fileID: 2103862779}
   - {fileID: 749227175}
   - {fileID: 323092721}
   - {fileID: 1316222602}
-  - {fileID: 1344546713}
   - {fileID: 2032583192}
   - {fileID: 714864435}
   - {fileID: 78825399}
@@ -37057,7 +37057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1683904475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39721,6 +39721,11 @@ Prefab:
         type: 2}
       propertyPath: bindScale
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 20267785530491922, guid: adfe62543b402fc41a682dd944ea23c5,
+        type: 2}
+      propertyPath: orthographic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: adfe62543b402fc41a682dd944ea23c5, type: 2}
@@ -47520,7 +47525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2056750212
 MonoBehaviour:
   m_ObjectHideFlags: 0
