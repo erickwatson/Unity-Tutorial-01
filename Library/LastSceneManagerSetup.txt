@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/2D Game.unity
+- path: Assets/Tute Game.unity
   isLoaded: 1
   isActive: 1
