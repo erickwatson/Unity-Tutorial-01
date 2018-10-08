@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Tute Game.unity
+- path: Assets/Tute Game Menu.unity
   isLoaded: 1
   isActive: 1
