@@ -10,6 +10,7 @@ TagManager:
   - MirrorCam
   - Ground
   - Minimap
+  - Wall
   layers:
   - Default
   - TransparentFX
