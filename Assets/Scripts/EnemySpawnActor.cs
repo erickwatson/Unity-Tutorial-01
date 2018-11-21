@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySpawnActor : MonoBehaviour {
 
     public GameObject enemy_prefab;
+    public GameObject spawner;
     public float spawn_time = 2;// seconds between spawns
     public int spawn_count = 7;
     public float spawn_radius; // distance from player to spawn
@@ -46,7 +47,7 @@ public class EnemySpawnActor : MonoBehaviour {
                 Vector3 spawn_direction = new Vector3(Mathf.Sin(spawn_angle), 0, Mathf.Cos(spawn_angle));
                 spawn_direction *= spawn_radius;
 
-                Vector3 spawn_point = player.transform.position + spawn_direction;
+                Vector3 spawn_point = spawner.transform.position + spawn_direction;
                 // Spawn the enemy at the desired location
                 Instantiate(enemy_prefab, spawn_point, Quaternion.identity);
 
