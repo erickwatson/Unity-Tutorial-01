@@ -39,9 +39,12 @@ public class PlayerActor : MonoBehaviour {
 
     public ParticleSystem hitscan_system;
     public AudioSource hitscan_sound;
-
+    
 
     public float MoveSpeed;
+
+
+
 
 
 
@@ -64,6 +67,12 @@ public class PlayerActor : MonoBehaviour {
 
     private Vector3 PlatformGetPlayerFireDirection()
     {
+
+        float rightStickHorizontal = Input.GetAxis(ControllerMapping.RightStickHorizontal);
+        float rightStickVertical = Input.GetAxis(ControllerMapping.RightStickVertical);
+
+        // Vector3 to_cast_point = Vector3.zero;
+   
         Vector3 mouse_pos =  Vector3.right * (Input.GetAxis("Mouse X") + Screen.width / 2.0f);
 
         Ray mouse_ray = Camera.main.ScreenPointToRay(mouse_pos);
@@ -90,6 +99,7 @@ public class PlayerActor : MonoBehaviour {
         return Input.GetMouseButtonDown(0);
  
     }
+
 
 
 
@@ -156,18 +166,9 @@ public class PlayerActor : MonoBehaviour {
         // change this
         jumpSpeed += Physics.gravity * mass * Time.deltaTime;
 
-        
 
-        //if (Input.GetKey(KeyCode.LeftControl))
-        //{
-        //   controller.Move(fly_down * Time.deltaTime * speed);
-        //}
-        //if (Input.GetKey(KeyCode.Space))
-        //{
-        //   controller.Move(fly_up * Time.deltaTime * speed);
-
-        //}
-        if (Input.GetKey(KeyCode.Space) && controller.isGrounded)
+        // Jump
+        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(ControllerMapping.PS4_X_BUTTON)) && controller.isGrounded)
         {
           
             //Jump
@@ -179,7 +180,7 @@ public class PlayerActor : MonoBehaviour {
 
         // fall speed calculation
         direction += jumpSpeed;
-        //Debug.Log(jumpSpeed);
+
 
         direction *= Time.deltaTime;
         controller.Move(direction);
@@ -206,7 +207,7 @@ public class PlayerActor : MonoBehaviour {
         {
             if (info.collider.tag == "Enemy")
             {
-                //info.collider.GetComponent<AudioSource>().Play();
+        
                 Destroy(info.collider.gameObject);
             }
 
@@ -242,7 +243,7 @@ public class PlayerActor : MonoBehaviour {
         KeyboardInput();
 
         // Fire
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)||Input.GetKey(ControllerMapping.PS4_R2_BUTTON))
         RayGun();
 
         if (miniMapPlayer != null)

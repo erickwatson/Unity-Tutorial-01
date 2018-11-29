@@ -37,20 +37,20 @@ public class CameraSwitch : MonoBehaviour {
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(ControllerMapping.PS4_TRI_BUTTON))
         {
             thirdPerson.gameObject.SetActive(!thirdPerson.gameObject.activeSelf);
             firstPerson.gameObject.SetActive(!firstPerson.gameObject.activeSelf);
             reticule.gameObject.SetActive(!reticule.gameObject.activeSelf);
         }
 
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.O) || Input.GetKeyDown(ControllerMapping.PS4_CIR_BUTTON))
         {
             leftMirror.gameObject.SetActive(!leftMirror.gameObject.activeSelf);
             rightMirror.gameObject.SetActive(!rightMirror.gameObject.activeSelf);
         }
 
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M) || Input.GetKeyDown(ControllerMapping.PS4_SQ_BUTTON))
         {
             miniMap.gameObject.SetActive(!miniMap.gameObject.activeSelf);
         }
